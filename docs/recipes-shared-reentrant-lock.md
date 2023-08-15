@@ -26,8 +26,8 @@ public InterProcessMutex(CuratorFramework client, String path);
 To acquire the lock, use one of the acquire methods:
 
 ```java
-Acquire the mutex - blocking until it's available. Note: the same thread can call acquire
-re-entrantly. Each call to acquire must be balanced by a call to release()
+// Acquire the mutex - blocking until it's available. Note: the same thread can call acquire
+// re-entrantly. Each call to acquire must be balanced by a call to release()
 public void acquire();
 ```
 
