@@ -63,4 +63,4 @@ Enhancements or new feature proposals are also welcome. The more concrete and ra
 ## Source code
 
 * Curator core repository: https://github.com/apache/curator
-* Curator website repository: https://github.com/apache/curator-website
+* Curator website repository: https://github.com/apache/curator-site

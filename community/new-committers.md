@@ -37,7 +37,7 @@ When doing a release you will be asked for your PGP password multiple times unle
 
 ### Maven Settings
 
-Your Maven settings (`~/.m2/settings.xml`) file should have the following (Note that `curator-website-checkout-path` is used as a temporary path when deploying the Curator website):
+Your Maven settings (`~/.m2/settings.xml`) file should have the following:
 
 ```xml
 <settings>
