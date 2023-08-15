@@ -24,10 +24,34 @@ on:
   pull_request:
 
 jobs:
-  deploy:
+  build-javadoc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          repository: 'apache/curator'
+      - uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Build javadoc
+        run: mvn javadoc:aggregate
+      - name: Upload javadoc
+        uses: actions/upload-artifact@v3
+        with:
+          name: javadoc
+          path: ./target/site/apidocs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build-javadoc]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download javadoc
+        uses: actions/download-artifact@v3
+        with:
+          name: javadoc
+          path: ./static/apidocs
       - uses: actions/setup-node@v3
         with:
           node-version: 19.x
