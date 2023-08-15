@@ -26,6 +26,7 @@ const committers: CommitterData[] = [
     {name: 'Shay Shimony', apacheId: 'shayshim', githubId: 'shayshim', url: 'https://people.apache.org/~shayshim', timezone: '+2'},
     {name: 'Enrico Olivelli', apacheId: 'eolivelli', githubId: 'eolivelli', url: 'https://people.apache.org/~eolivelli', timezone: '+1'},
     {name: 'Zili Chen', apacheId: 'tison', githubId: 'tisonkun', url: 'https://tisonkun.org', timezone: '+8'},
+    {name: 'Kezhu Wang', apacheId: 'kezhuw', githubId: 'kezhuw', url: 'https://blog.kezhuw.name/', timezone: '+8'},
 ]
 
 export default function Committers(): React.JSX.Element {
