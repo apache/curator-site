@@ -24,17 +24,17 @@ An implementation of a Distributed Delay Queue. A Delay Queue is similar to a Pr
 ## Creating a DistributedDelayQueue
 
 ```java
+// Parameters:
+// client - the curator client
+// consumer - message consumer
+// serializer - serializer to use for items
+// queuePath - path to store queue
 public static <T> QueueBuilder<T> builder(
     CuratorFramework client,
     QueueConsumer<T> consumer,
     QueueSerializer<T> serializer,
     java.lang.String queuePath
 );
-// Parameters:
-// client - the curator client
-// consumer - message consumer
-// serializer - serializer to use for items
-// queuePath - path to store queue
 ```
 
 ```java

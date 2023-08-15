@@ -24,17 +24,17 @@ An implementation of the Distributed Queue ZK recipe. Items put into the queue a
 ### Creating a DistributedQueue
 
 ```java
+// Parameters:
+// client - the curator client
+// consumer - functor to receive messages
+// serializer - serializer to use for items
+// queuePath - path to store queue
 public static <T> QueueBuilder<T> builder(
     CuratorFramework client,
     QueueConsumer<T> consumer,
     QueueSerializer<T> serializer,
     java.lang.String queuePath
 );
-// Parameters:
-// client - the curator client
-// consumer - functor to receive messages
-// serializer - serializer to use for items
-// queuePath - path to store queue
 ```
 
 ```java

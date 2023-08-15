@@ -24,17 +24,17 @@ An implementation of the Distributed Priority Queue ZK recipe.
 ## Creating a DistributedPriorityQueue
 
 ```java
+// Parameters:
+// client - the curator client
+// consumer - message consumer
+// serializer - serializer to use for items
+// queuePath - path to store queue
 public static <T> QueueBuilder<T> builder(
     CuratorFramework client,
     QueueConsumer<T> consumer,
     QueueSerializer<T> serializer,
     java.lang.String queuePath
 );
-// Parameters:
-// client - the curator client
-// consumer - message consumer
-// serializer - serializer to use for items
-// queuePath - path to store queue
 ```
 
 ```java
@@ -44,9 +44,9 @@ DistributedPriorityQueue<MessageType> queue = builder.buildPriorityQueue(minItem
 ```
 
 ```java
-public DistributedPriorityQueue<T> buildPriorityQueue(int minItemsBeforeRefresh);
 // Parameters:
 // minItemsBeforeRefresh - minimum items to process before refreshing the item list
+public DistributedPriorityQueue<T> buildPriorityQueue(int minItemsBeforeRefresh);
 ```
 
 Build a DistributedPriorityQueue from the current builder values.

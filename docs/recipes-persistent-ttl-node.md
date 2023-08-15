@@ -15,7 +15,7 @@ PersistentTtlNode is useful when you need to create a TTL node but don't want to
 
 ## Creating a PersistentTtlNode
 
-```
+```java
 // Parameters:
 // client - client instance
 // path path for the parent ZNode
