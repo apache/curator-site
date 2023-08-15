@@ -1,5 +1,7 @@
 # New Committers
 
+## Onboarding
+
 Welcome to Apache Curator!
 
 For new committers,
