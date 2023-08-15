@@ -27,7 +27,7 @@ A utility that attempts to keep the data from a node locally cached. Optionally 
 // client - the client
 // path - path to watch
 // options - empty or one or more options
-CuratorCache.build(CuratorFramework client, String path, Options... options);
+CuratorCache build(CuratorFramework client, String path, Options... options);
 ```
 
 There is a builder factory available for additional options when building the cache instance. See `CuratorCacheBuilder` for details.

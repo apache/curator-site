@@ -40,9 +40,9 @@ ServiceProviders are allocated by using a `ServiceProviderBuilder`. You obtain a
 The ServiceProvider must be started by calling `start()`. When finished you should call `close()`. The only method in ServiceProvider is:
 
 ```java
-public ServiceInstance<T> getInstance() throws Exception;
 // Return an instance for a single use. IMPORTANT: users should not hold on to the instance
 // returned. A fresh instance should always be retrieved.
+public ServiceInstance<T> getInstance() throws Exception;
 ```
 
 :::note

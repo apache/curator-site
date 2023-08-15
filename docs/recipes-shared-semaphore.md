@@ -52,7 +52,7 @@ To acquire one lease/usage, use one of the acquire methods:
 
 ```java
 // Acquire a lease. If no leases are available, this method blocks until either the maximum number of
-/ leases is increased or another client/process closes a lease.
+// leases is increased or another client/process closes a lease.
 // The client must close the lease when it is done with it. You should do this in a finally block.
 public Lease acquire();
 ```

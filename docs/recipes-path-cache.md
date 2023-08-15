@@ -17,7 +17,7 @@ A Path Cache is used to watch a ZNode. Whenever a child is added, updated or rem
 
 ## Creating a PathChildrenCache
 
-```
+```java
 // Parameters:
 // client - the client
 // path - path to watch

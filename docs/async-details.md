@@ -124,7 +124,6 @@ async.create()
                                 .getData()
                                 .forPath(actualPath)
                                 .thenApply(() -> watchTriggered()));
-
 ```
 
 ### AsyncStage canonical usage

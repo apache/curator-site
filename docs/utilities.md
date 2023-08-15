@@ -41,7 +41,7 @@ CuratorFramework client = CuratorFrameworkFactory.builder()
 Curator's Locker uses Java 7's try-with-resources feature to making using Curator locks safer:
 
 ```java
-InterProcessMutex mutex = new InterProcessMutex(...) // or any InterProcessLock
+InterProcessMutex mutex = new InterProcessMutex(...); // or any InterProcessLock
 try (Locker locker = new Locker(mutex, maxTimeout, unit)) {
    // do work
 }

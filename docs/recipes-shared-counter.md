@@ -43,17 +43,17 @@ count.close();
 int getCount();
 ```
 
-```
+```java
 // Add a listener for changes to the count
 void addListener(SharedCountListener listener);
 ```
 
-```
+```java
 // Change the shared count value irrespective of its previous state
 public void setCount(int newCount);
 ```
 
-```
+```java
 // Changes the shared count only if its value has not changed since this client last read it. If the count
 // has changed, the value is not set and this client's view of the value is updated. i.e. if the count is
 // not successful you can get the updated value by calling getCount().
