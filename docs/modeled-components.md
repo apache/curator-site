@@ -1,3 +1,7 @@
+---
+displayed_sidebar: docs
+---
+
 # Modeled Curator - Components
 
 Modeled Curator components are intended to allow you to model your ZooKeeper usage early in your application so that the majority of the code that interacts with ZooKeeper doesn't need to be concerned with paths, byte arrays, ACLs, options, etc. The [Pub-Sub Example](https://github.com/apache/curator/tree/master/curator-examples/src/main/java/pubsub) can give you some ideas on how to accomplish this.

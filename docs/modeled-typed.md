@@ -1,3 +1,7 @@
+---
+displayed_sidebar: docs
+---
+
 # Modeled Curator - Caching, Typed Parameters and Versioning
 
 In addition to its [main features](modeled-components.md) Modeled Curator also supports integrated caching, typed parameters and versioning.
