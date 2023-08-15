@@ -4,7 +4,7 @@ Dealing with session failure.
 
 ## Details
 
-ZooKeeper's clients maintain a session with the server ensemble. Ephemeral nodes are tied to this session. When writing ZooKeeper-based applications you must deal with session expirations (due to network partitions, server crashes, etc.). This ZooKeeper FAQ discusses it: http://wiki.apache.org/hadoop/ZooKeeper/FAQ#A3
+ZooKeeper's clients maintain a session with the server ensemble. Ephemeral nodes are tied to this session. When writing ZooKeeper-based applications you must deal with session expirations (due to network partitions, server crashes, etc.). This ZooKeeper FAQ discusses it: https://cwiki.apache.org/confluence/display/ZOOKEEPER/FAQ
 
 For the most part, Curator shields you from the details of session management. However, Curator's behavior can be modified. By default, Curator treats session failures the same way that it treats connection failures: i.e. the current retry policy is checked and, if permitted, operations are retried.
 
