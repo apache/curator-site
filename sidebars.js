@@ -74,7 +74,7 @@ const sidebars = {
         },
         'zk-compatibility-34',
         'breaking-changes',
-        {type: 'link', label: 'Javadoc', href: '/apidocs/'},
+        {type: 'link', label: 'Javadoc', href: 'pathname:///apidocs/'},
         {type: 'link', label: 'Wiki', href: 'https://cwiki.apache.org/confluence/display/CURATOR'},
         {type: 'html', defaultStyle: true, value: 'EXTENSIONS'},
         'service-discovery',
