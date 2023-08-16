@@ -23,6 +23,7 @@
 # Generated files
 .docusaurus
 .cache-loader
+/static/apidocs/
 
 # Misc
 .DS_Store
