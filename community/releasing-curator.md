@@ -123,7 +123,7 @@ The tag to be voted upon:
 https://github.com/apache/curator/releases/tag/apache-curator-X.X.X
 
 Curator's KEYS file containing PGP keys we use to sign the release:
-https://www.apache.org/dist/curator/KEYS
+https://downloads.apache.org/curator/KEYS
 
 [ ] +1  approve
 [ ] +0  no opinion
@@ -165,7 +165,7 @@ Hello,
 The Apache Curator  team is pleased to announce the  release of version x.y.z. Apache  Curator is a Java/JVM client  library for Apache ZooKeeper[1], a distributed  coordination service. Apache Curator includes a  high-level API framework and utilities to  make using Apache ZooKeeper much easier  and more reliable. It also includes  recipes for common use cases and  extensions such as service discovery and a Java 8 asynchronous DSL. For more details, please visit the project website: https://curator.apache.org/
 
 The download page for Apache Curator is here:
-https://curator.apache.org/releases.html
+https://curator.apache.org/download/
 
 The binary artifacts for Curator are available from Maven Central and its mirrors.
 
