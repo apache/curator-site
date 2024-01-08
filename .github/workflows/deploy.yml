@@ -35,7 +35,7 @@ jobs:
           distribution: zulu
           java-version: '21'
       - name: Build javadoc
-        run: mvn javadoc:aggregate
+        run: ./mvnw install javadoc:aggregate -DskipTests
       - name: Upload javadoc
         uses: actions/upload-artifact@v3
         with:
