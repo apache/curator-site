@@ -134,11 +134,11 @@ https://downloads.apache.org/curator/KEYS
 
 ```text
 To: dev@curator.apache.org
-Subject: [RESULT] [VOTE] Release Apache Curator x.y.z
+Subject: [RESULT] [VOTE] Release Apache Curator X.Y.Z
 
 Hello,
 
-The vote to release Curator x.y.z has passed/failed.
+The vote to release Curator X.Y.Z has passed.
 
 +1 (binding):
 
@@ -150,7 +150,6 @@ The vote to release Curator x.y.z has passed/failed.
     Jordan Zimmerman
     Jay Zarfoss
 
-...if vote was successful..
 I will promote the artifacts to the central repo.
 ```
 
@@ -158,11 +157,11 @@ I will promote the artifacts to the central repo.
 
 ```text
 To: announce@apache.org, user@curator.apache.org, dev@curator.apache.org, user@zookeeper.apache.org
-Subject: [ANNOUNCE] Apache Curator x.y.z released
+Subject: [ANNOUNCE] Apache Curator X.Y.Z released
 
 Hello,
 
-The Apache Curator  team is pleased to announce the  release of version x.y.z. Apache  Curator is a Java/JVM client  library for Apache ZooKeeper[1], a distributed  coordination service. Apache Curator includes a  high-level API framework and utilities to  make using Apache ZooKeeper much easier  and more reliable. It also includes  recipes for common use cases and  extensions such as service discovery and a Java 8 asynchronous DSL. For more details, please visit the project website: https://curator.apache.org/
+The Apache Curator team is pleased to announce the release of version <<PASTE X.Y.Z>>. Apache  Curator is a Java/JVM client library for Apache ZooKeeper[1], a distributed coordination service. Apache Curator includes a high-level API framework and utilities to make using Apache ZooKeeper much easier and more reliable. It also includes recipes for common use cases and extensions such as service discovery and a Java 8 asynchronous DSL. For more details, please visit the project website: https://curator.apache.org/
 
 The download page for Apache Curator is here:
 https://curator.apache.org/download/
@@ -176,7 +175,6 @@ Release Notes:
 
 <<PASTE RELEASE NOTES FROM JIRA HERE>>
 
-
 Regards,
 
 The Curator Team
@@ -188,11 +186,11 @@ The Curator Team
 
 ```text
 To: dev@curator.apache.org
-Subject: [CANCEL] [VOTE] Release Apache Curator version X.X.X
+Subject: [CANCEL] [VOTE] Release Apache Curator version X.Y.Z
 
 Hello,
 
-The vote for Apache Curator version X.X.X has been canceled due to [reason].
+The vote for Apache Curator version X.Y.Z has been canceled due to [reason].
 
 Regards,
 The Curator Team
