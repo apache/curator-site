@@ -16,7 +16,7 @@ To build a simple static path, use:
 ZPath path = ZPath.parse("/my/static/path");
 ```
 
-To build a path with parameters, use. `ZPath.parseWithIds()` using the value "{XXXX}" to denote a parameter. You can then use the `resolve()` method to replace the parameters. The value between "{}" can be any value. E.g.,
+To build a path with parameters, use. `ZPath.parseWithIds()` using the value `"{XXXX}"` to denote a parameter. You can then use the `resolve()` method to replace the parameters. The value between `"{}"` can be any value. E.g.,
 
 ```java
 ZPath path = ZPath.parseWithIds("/foo/{first param}/bar/{second param}");
@@ -37,7 +37,7 @@ ZPath partial = path.resolve("standard");
 // partial is now "/foo/standard/bar/{id}"
 ```
 
-[ModeledFramework](#ModeledFramework) takes advantage of this. See below for details.
+[ModeledFramework](#modeledframework) takes advantage of this. See below for details.
 
 ## ModelSpec
 

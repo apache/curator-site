@@ -111,7 +111,7 @@ Curator loosely uses [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow
 
 * Anything in the master branch is deployable
 * The upcoming release is always "master"
-* To work on something new, create a descriptively named branch off of the upcoming release - usually the ID of the Jira issue (e.g. CURATOR-16)
+* To work on something new, create a descriptively named branch off of the upcoming release - usually the ID of the GitHub issue (e.g. CURATOR-16)
   * Commit to that branch locally and regularly push your work to the same named branch on the server
   * When you need feedback or help, or you think the branch is ready for merging, send an email on dev@curator.apache.org and ask for the branch to be reviewed
   * After someone else has reviewed and signed off on the feature, merge it into "master"
@@ -148,7 +148,7 @@ Make sure you choose an appropriate version for each release. The Maven build wi
 
 Curator's source is mirrored on GitHub at: https://github.com/apache/curator. Non-committers are [asked to fork this repository and submit pull requests](submitting-pull-requests.md) (PR) for changes. When a PR is received, a Curator committer can test and possibly merge it by:
 
-* Create a branch for the PR: `git checkout -b <branch name>` - the branch name is usually the JIRA ID of the issue
+* Create a branch for the PR: `git checkout -b <branch name>` - the branch name is usually the ID of the GitHub issue
 * Pull the changes from the PR: `git pull https://github.com/<users-name>/curator.git <branch>` (or you can use `gh pr checkout <pr-number>` with [GitHub CLI](https://cli.github.com/)).
 * Test, updated, etc. the change. Periodically push the change to the main repo. For the initial push: `git push -u origin <branch name>`
 * If the change is accepted, merge it into the master branch and push the master branch. This will automatically close the GitHub PR. NOTE: Please use `git merge --squash` as this makes it easier to read the history and do cherry-pick.
