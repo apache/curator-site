@@ -1,1 +1,0 @@
-(self.webpackChunkcurator_site=self.webpackChunkcurator_site||[]).push([[8855],{8855:()=>{}}]);

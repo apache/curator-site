@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcurator_site=self.webpackChunkcurator_site||[]).push([[3237],{4090:(e,t,r)=>{r.r(t),r.d(t,{default:()=>s});var u=r(3442),a=r(9496),c=r(7959);function s(){return a.createElement(u.l_,{to:(0,c.Z)("docs/about")})}}}]);
