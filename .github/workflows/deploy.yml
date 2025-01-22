@@ -37,7 +37,7 @@ jobs:
       - name: Build javadoc
         run: ./mvnw install javadoc:aggregate -DskipTests
       - name: Upload javadoc
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: javadoc
           path: ./target/site/apidocs
@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download javadoc
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: javadoc
           path: ./static/apidocs

@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,7 +23,7 @@ const config = {
                     routeBasePath: "/docs",
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
-                    sidebarPath: require.resolve('./sidebars.js'),
+                    sidebarPath: './sidebars.js',
                     editUrl: 'https://github.com/apache/curator-site/tree/main/',
                 },
                 // FIXME - uncomment once we write the first blog
@@ -33,14 +32,14 @@ const config = {
                 //     editUrl: 'https://github.com/apache/curator-site/tree/main/',
                 // },
                 theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
+                    customCss: './src/css/custom.css',
                 },
             }),
         ],
     ],
 
     themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+        /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             image: 'img/curator-highres.png',
             colorMode: {
@@ -53,9 +52,9 @@ const config = {
                     src: 'img/curator-logo.svg',
                 },
                 items: [
-                    {type: 'doc', docId: 'about', position: 'right', label: 'Documentation'},
-                    {type: 'doc', docId: 'community', position: 'right', label: 'Community', docsPluginId: 'community'},
-                    {to: '/download', label: 'Download', position: 'right'},
+                    { type: 'doc', docId: 'about', position: 'right', label: 'Documentation' },
+                    { type: 'doc', docId: 'community', position: 'right', label: 'Community', docsPluginId: 'community' },
+                    { to: '/download', label: 'Download', position: 'right' },
                     // FIXME - uncomment once we write the first blog
                     // {to: '/blog', label: 'Blog', position: 'right'},
                     {
@@ -64,19 +63,19 @@ const config = {
                         className: 'header-github-link',
                         'aria-label': 'GitHub repository',
                     },
-                    {type: 'search', position: 'right'},
+                    { type: 'search', position: 'right' },
                     {
                         type: 'dropdown',
                         label: 'ASF',
                         position: 'right',
                         items: [
-                            {label: 'Foundation', to: 'https://www.apache.org/'},
-                            {label: 'License', to: 'https://www.apache.org/licenses/'},
-                            {label: 'Events', to: 'https://www.apache.org/events/current-event.html'},
-                            {label: 'Security', to: 'https://www.apache.org/security/'},
-                            {label: 'Sponsorship', to: 'https://www.apache.org/foundation/sponsorship.html'},
-                            {label: 'Privacy', to: 'https://privacy.apache.org/policies/privacy-policy-public.html'},
-                            {label: 'Thanks', to: 'https://www.apache.org/foundation/thanks.html'}
+                            { label: 'Foundation', to: 'https://www.apache.org/' },
+                            { label: 'License', to: 'https://www.apache.org/licenses/' },
+                            { label: 'Events', to: 'https://www.apache.org/events/current-event.html' },
+                            { label: 'Security', to: 'https://www.apache.org/security/' },
+                            { label: 'Sponsorship', to: 'https://www.apache.org/foundation/sponsorship.html' },
+                            { label: 'Privacy', to: 'https://privacy.apache.org/policies/privacy-policy-public.html' },
+                            { label: 'Thanks', to: 'https://www.apache.org/foundation/thanks.html' }
                         ],
                     },
                 ],
@@ -92,8 +91,8 @@ const config = {
                 copyright: 'Apache Curator, the Apache feather logo, and the Apache Curator project logos are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.',
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                theme: prismThemes.github,
+                darkTheme: prismThemes.dracula,
                 additionalLanguages: [
                     'groovy',
                     'java',
@@ -109,7 +108,7 @@ const config = {
                 id: 'community',
                 path: 'community',
                 routeBasePath: 'community',
-                sidebarPath: require.resolve('./sidebarsCommunity.js'),
+                sidebarPath: './sidebarsCommunity.js',
                 editUrl: 'https://github.com/apache/curator-site/tree/main/',
             },
         ],
@@ -129,4 +128,4 @@ const config = {
     ]
 };
 
-module.exports = config;
+export default config;

@@ -43,31 +43,31 @@ Clients must make appropriate REST calls to register themselves and send periodi
 ### putService
 
 * Method: PUT
-* Path: v1/service/{name}/{id}
+* Path: `v1/service/{name}/{id}`
 * Request Entity: ServiceInstance
 * Response Entity: n/a
-* Description: {name} is the service name, {id} is the instance id. The request entity is a ServiceInstance. This method registers a service instance. If the ServiceType is STATIC, the instance is registered only for the pre-defined period (defined in the DiscoveryContext). STATIC services must call putService at least once per period. PERMANENT services are registered until they are manually deleted.
+* Description: `{name}` is the service name, `{id}` is the instance id. The request entity is a ServiceInstance. This method registers a service instance. If the ServiceType is STATIC, the instance is registered only for the pre-defined period (defined in the DiscoveryContext). STATIC services must call putService at least once per period. PERMANENT services are registered until they are manually deleted.
 
 ### removeService
 
 * Method: DELETE
-* Path: v1/service/{name}/{id}
+* Path: `v1/service/{name}/{id}`
 * Request Entity: n/a
 * Response Entity: n/a
-* Description: {name} is the service name, {id} is the instance id. The specified service is deleted/unregistered.
+* Description: `{name}` is the service name, `{id}` is the instance id. The specified service is deleted/unregistered.
 
 ### get
 
 * Method: GET
-* Path: v1/service/{name}/{id}
+* Path: `v1/service/{name}/{id}`
 * Request Entity: n/a
 * Response Entity: ServiceInstance
-* Description: {name} is the service name, {id} is the instance id. Returns the complete ServiceInstance for the specified service. 404 is returned if not found.
+* Description: `{name}` is the service name, `{id}` is the instance id. Returns the complete ServiceInstance for the specified service. 404 is returned if not found.
 
 ### getAllNames
 
 * Method: GET
-* Path: v1/service
+* Path: `v1/service`
 * Request Entity: n/a
 * Response Entity: ServiceNames
 * Description: Returns all currently registered service names.
@@ -75,18 +75,18 @@ Clients must make appropriate REST calls to register themselves and send periodi
 ### getAll
 
 * Method: GET
-* Path: v1/service/{name}
+* Path: `v1/service/{name}`
 * Request Entity: n/a
 * Response Entity: ServiceInstances
-* Description: {name} is the service name. Returns all service instances for the named service.
+* Description: `{name}` is the service name. Returns all service instances for the named service.
 
 ### getAny
 
 * Method: GET
-* Path: v1/anyservice/{name}
+* Path: `v1/anyservice/{name}`
 * Request Entity: n/a
 * Response Entity: ServiceInstance
-* Description: {name} is the service name. Return a random instance from the given service or 404.
+* Description: `{name}` is the service name. Return a random instance from the given service or 404.
 
 ## JSON specs
 
