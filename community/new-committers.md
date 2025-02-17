@@ -95,7 +95,7 @@ While Curator mainly uses git for source control, certain components required by
 * Staging directory: svn co https://dist.apache.org/repos/dist/dev/curator/
 * Release directory: svn co https://dist.apache.org/repos/dist/release/curator/
 
-You must add your GPG key to the KEYS file in "repos/dist/release/curator/" and commit the changes. E.g. (replace NAME with the username you used to generate the keys):
+You must add your GPG key to the KEYS file in `repos/dist/release/curator/` and commit the changes. E.g. (replace NAME with the username you used to generate the keys):
 
 ```shell
 cd DIST RELEASE CURATOR directory
@@ -107,7 +107,7 @@ svn commit -m "Added my keys"
 
 ### GitHub Flow
 
-Curator loosely uses [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html). The short form:
+Curator loosely uses [GitHub Flow](https://scottchacon.com/2011/08/31/github-flow). The short form:
 
 * Anything in the master branch is deployable
 * The upcoming release is always "master"
@@ -148,11 +148,11 @@ Make sure you choose an appropriate version for each release. The Maven build wi
 
 Curator's source is mirrored on GitHub at: https://github.com/apache/curator. Non-committers are [asked to fork this repository and submit pull requests](submitting-pull-requests.md) (PR) for changes. When a PR is received, a Curator committer can test and possibly merge it by:
 
-* Create a branch for the PR: `git checkout -b <branch name>` - the branch name is usually the ID of the GitHub issue
+* Create a branch for the PR: `git checkout -b <branch-name>`. The branch name is usually the ID of the GitHub issue.
 * Pull the changes from the PR: `git pull https://github.com/<users-name>/curator.git <branch>` (or you can use `gh pr checkout <pr-number>` with [GitHub CLI](https://cli.github.com/)).
-* Test, updated, etc. the change. Periodically push the change to the main repo. For the initial push: `git push -u origin <branch name>`
+* Test, updated, etc. the change. Periodically push the change to the main repo. For the initial push: `git push -u origin <branch-name>`.
 * If the change is accepted, merge it into the master branch and push the master branch. This will automatically close the GitHub PR. NOTE: Please use `git merge --squash` as this makes it easier to read the history and do cherry-pick.
 
 ### Maven Checks
 
-Regardless of which IDE you use, you should periodically perform a `mvn clean install` to validate that the various configured checks are passing as well as the unit tests.
+Regardless of which IDE you use, you should periodically perform a `./mvnw clean install` to validate that the various configured checks are passing as well as the unit tests.

@@ -10,9 +10,9 @@ Curator also uses Apache's GitHub mirroring. All source code/bug fix submissions
 
 You must also create an issue in [Curator's Issue Tracker](https://github.com/apache/curator/issues) (reference the Pull Request in the issue) and create a git branch with the same name as the Issue. All discussion, comments, etc. regarding the Pull Request should be in the Issue Tracker and/or GitHub and not by email.
 
-* Fork the Curator project from GitHub
-* Create a branch with the same name as the GitHub Issue number (e.g. CURATOR-1234) in your fork and push it to GitHub
-* Create a Pull Request in GitHub. The name of the Pull Request should be in the form: `[CURATOR-XXX] Summary of the Issue`
+* Fork the Curator project from GitHub.
+* Create a branch with the same name as the GitHub Issue number (e.g. CURATOR-1234) in your fork and push it to GitHub.
+* Create a Pull Request in GitHub. The name of the Pull Request should be in the form: `[CURATOR-XXX] Summary of the Issue`.
 * The Pull Request should include a description with the issue number associated.
 
 ## Apache Contribution Guide
@@ -36,5 +36,5 @@ Curator uses the following tools and libraries:
 * There must be a GitHub Issue created for your change.
 * Create a git branch with the same name as the Issue.
 * All submissions must have TestNG tests.
-* All submissions must have proper Apache license headers. Run the following command to make sure all files have headers: `docker run --rm -v $(pwd):/github/workspace ghcr.io/korandoru/hawkeye-native:v3 format`.
+* All submissions must have proper Apache license headers. Run the following command to make sure all files have headers: `docker run --rm -v $(pwd):/github/workspace ghcr.io/korandoru/hawkeye:v6 format`.
 * The simpler and smaller the change the more likely it is to be accepted.
