@@ -9,7 +9,6 @@ type CommitterData = {
     timezone: string,
 }
 
-// sorted by apacheId
 const committers: CommitterData[] = [
     {name: 'Jordan Zimmerman', apacheId: 'randgalt', githubId: 'Randgalt', url: 'https://people.apache.org/~randgalt', timezone: '-5'},
     {name: 'Jay Zarfoss', apacheId: 'zarfide', githubId: 'zarfide', url: 'https://www.linkedin.com/pub/jay-zarfoss/34/56/a19', timezone: '-8'},

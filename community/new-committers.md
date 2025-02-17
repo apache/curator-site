@@ -12,7 +12,7 @@ For new committers,
 * Add an entry for yourself to https://svn.apache.org/repos/private/committers/info/. The information there is used to generate the public information about ASF committers on the people.apache.org home page: http://people.apache.org/
 * Prepare for being a committer. See the next section.
 
-As your first commit, add yourself to the committers list in [the site source file](https://github.com/apache/curator-site/blob/main/src/components/Committers/index.tsx). This will make your name show up in the "team list" when the website is generated triggered by new commit.
+As your first commit, add yourself to the committers list in [the site source file](https://github.com/apache/curator-site/blob/main/src/components/Committers/index.tsx). This will make your name show up in the [team list](https://curator.apache.org/community/team) when the website is generated triggered by new commit.
 
 As always, do not hesitate to ask if you have any questions or have problems with your account.
 

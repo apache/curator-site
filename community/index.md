@@ -15,11 +15,10 @@ You can:
 ## Mailing list
 
 | Name                       | Desc                            | Subscribe                                                | Unsubscribe                                                  | Post                                   | Archive                                                                  |
-| -------------------------- | ------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------- | ------------------------------------------------------------------------ |
+|----------------------------|---------------------------------|----------------------------------------------------------|--------------------------------------------------------------|----------------------------------------|--------------------------------------------------------------------------|
 | user@curator.apache.org    | Usage issues and questions      | [Subscribe](mailto:user-subscribe@curator.apache.org)    | [Unsubscribe](mailto:user-unsubscribe@curator.apache.org)    | [Post](mailto:user@curator.apache.org) | [Archive](https://lists.apache.org/list.html?user@curator.apache.org)    |
 | dev@curator.apache.org     | Development related discussions | [Subscribe](mailto:dev-subscribe@curator.apache.org)     | [Unsubscribe](mailto:dev-unsubscribe@curator.apache.org)     | [Post](mailto:dev@curator.apache.org)  | [Archive](https://lists.apache.org/list.html?dev@curator.apache.org)     |
 | commits@curator.apache.org | All commits to our repositories | [Subscribe](mailto:commits-subscribe@curator.apache.org) | [Unsubscribe](mailto:commits-unsubscribe@curator.apache.org) | Read only list                         | [Archive](https://lists.apache.org/list.html?commits@curator.apache.org) |
-
 
 Please make sure you are subscribed to the mailing list you are posting to!
 
