@@ -8,11 +8,11 @@ Curator also uses Apache's GitHub mirroring. All source code/bug fix submissions
 
 [Create your Pull Request](https://help.github.com/articles/creating-a-pull-request) against the latest revision of the files by forking the mirrored project at https://github.com/apache/curator (keep your fork in sync from then on).
 
-You must also create an issue in [Curator's Issue Tracker](https://github.com/apache/curator/issues) (reference the Pull Request in the issue) and create a git branch with the same name as the Issue. All discussion, comments, etc. regarding the Pull Request should be in the Issue Tracker and/or GitHub and not by email.
+You must also create an issue in [Curator's Issue Tracker](https://github.com/apache/curator/issues) (reference the Pull Request in the issue) and create a git branch with the same name as the Issue. All discussions, comments, etc. regarding the Pull Request should be in the Issue Tracker and/or GitHub and not by email.
 
 * Fork the Curator project from GitHub.
-* Create a branch with the same name as the GitHub Issue number (e.g. CURATOR-1234) in your fork and push it to GitHub.
-* Create a Pull Request in GitHub. The name of the Pull Request should be in the form: `[CURATOR-XXX] Summary of the Issue`.
+* Create a branch with the same name as the GitHub Issue number (e.g. GH-1234) in your fork and push it to GitHub.
+* Create a Pull Request in GitHub. The name of the Pull Request should be in the form: `GH-XXX. Summary of the Issue` where XXX is the issue number.
 * The Pull Request should include a description with the issue number associated.
 
 ## Apache Contribution Guide
@@ -31,8 +31,8 @@ Curator uses the following tools and libraries:
 
 ## Style and Development Guide
 
-* Use spaces not tabs.
-* Match the style of the Curator files. Any patches will be re-formatted to match Curator style.
+* Use spaces, not tabs.
+* Match the style of the Curator files. Any patches will be re-formatted to match Curator's style.
 * There must be a GitHub Issue created for your change.
 * Create a git branch with the same name as the Issue.
 * All submissions must have TestNG tests.
