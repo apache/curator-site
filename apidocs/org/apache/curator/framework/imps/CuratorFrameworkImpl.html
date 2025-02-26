@@ -87,7 +87,9 @@ loadScripts(document, 'script');</script>
 <h1 title="Class CuratorFrameworkImpl" class="title">Class CuratorFrameworkImpl</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance"><a href="CuratorFrameworkBase.html" title="class in org.apache.curator.framework.imps">org.apache.curator.framework.imps.CuratorFrameworkBase</a>
 <div class="inheritance">org.apache.curator.framework.imps.CuratorFrameworkImpl</div>
+</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -95,9 +97,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CuratorFrameworkImpl</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></span></div>
+<div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">CuratorFrameworkImpl</span>
+<span class="extends-implements">extends <a href="CuratorFrameworkBase.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkBase</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -121,16 +122,11 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <section class="constructor-summary" id="constructor-summary">
 <h2>Constructor Summary</h2>
 <div class="caption"><span>Constructors</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier</div>
-<div class="table-header col-second">Constructor</div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>&nbsp;</code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.apache.curator.framework.CuratorFrameworkFactory.Builder)" class="member-name-link">CuratorFrameworkImpl</a><wbr>(<a href="../CuratorFrameworkFactory.Builder.html" title="class in org.apache.curator.framework">CuratorFrameworkFactory.Builder</a>&nbsp;builder)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>protected </code></div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.apache.curator.framework.imps.CuratorFrameworkImpl)" class="member-name-link">CuratorFrameworkImpl</a><wbr>(<a href="CuratorFrameworkImpl.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkImpl</a>&nbsp;parent)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -156,148 +152,75 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Block until a connection to ZooKeeper is available or the maxWaitTime has been exceeded</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/ExistsBuilder.html" title="interface in org.apache.curator.framework.api">ExistsBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#checkExists()" class="member-name-link">checkExists</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearWatcherReferences(org.apache.zookeeper.Watcher)" class="member-name-link">clearWatcherReferences</a><wbr>(org.apache.zookeeper.Watcher&nbsp;watcher)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start an exists builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearWatcherReferences(org.apache.zookeeper.Watcher)" class="member-name-link">clearWatcherReferences</a><wbr>(org.apache.zookeeper.Watcher&nbsp;watcher)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Curator can hold internal references to watchers that may inhibit garbage collection.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Stop the client</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#compressionEnabled()" class="member-name-link">compressionEnabled</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#compressionEnabled()" class="member-name-link">compressionEnabled</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return whether compression is enabled by default for all create, setData and getData operations.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/CreateBuilder.html" title="interface in org.apache.curator.framework.api">CreateBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#create()" class="member-name-link">create</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a create builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createContainers(java.lang.String)" class="member-name-link">createContainers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../state/ConnectionStateErrorPolicy.html" title="interface in org.apache.curator.framework.state">ConnectionStateErrorPolicy</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConnectionStateErrorPolicy()" class="member-name-link">getConnectionStateErrorPolicy</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create all nodes in the specified path as containers if they don't
- already exist</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/DeleteBuilder.html" title="interface in org.apache.curator.framework.api">DeleteBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete()" class="member-name-link">delete</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a delete builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/GetACLBuilder.html" title="interface in org.apache.curator.framework.api">GetACLBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getACL()" class="member-name-link">getACL</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a get ACL builder</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/GetChildrenBuilder.html" title="interface in org.apache.curator.framework.api">GetChildrenBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChildren()" class="member-name-link">getChildren</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a get children builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/GetConfigBuilder.html" title="interface in org.apache.curator.framework.api">GetConfigBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConfig()" class="member-name-link">getConfig</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a getConfig builder</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../state/ConnectionStateErrorPolicy.html" title="interface in org.apache.curator.framework.state">ConnectionStateErrorPolicy</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConnectionStateErrorPolicy()" class="member-name-link">getConnectionStateErrorPolicy</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the configured error policy</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../listen/Listenable.html" title="interface in org.apache.curator.framework.listen">Listenable</a><wbr>&lt;<a href="../state/ConnectionStateListener.html" title="interface in org.apache.curator.framework.state">ConnectionStateListener</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConnectionStateListenable()" class="member-name-link">getConnectionStateListenable</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../listen/Listenable.html" title="interface in org.apache.curator.framework.listen">Listenable</a><wbr>&lt;<a href="../state/ConnectionStateListener.html" title="interface in org.apache.curator.framework.state">ConnectionStateListener</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConnectionStateListenable()" class="member-name-link">getConnectionStateListenable</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the listenable interface for the Connect State</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../listen/Listenable.html" title="interface in org.apache.curator.framework.listen">Listenable</a><wbr>&lt;<a href="../api/CuratorListener.html" title="interface in org.apache.curator.framework.api">CuratorListener</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCuratorListenable()" class="member-name-link">getCuratorListenable</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../listen/Listenable.html" title="interface in org.apache.curator.framework.listen">Listenable</a><wbr>&lt;<a href="../api/CuratorListener.html" title="interface in org.apache.curator.framework.api">CuratorListener</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCuratorListenable()" class="member-name-link">getCuratorListenable</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the listenable interface for events</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.apache.zookeeper.server.quorum.flexible.QuorumVerifier</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentConfig()" class="member-name-link">getCurrentConfig</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.apache.zookeeper.server.quorum.flexible.QuorumVerifier</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentConfig()" class="member-name-link">getCurrentConfig</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current maintains a cached view of the Zookeeper quorum config.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/GetDataBuilder.html" title="interface in org.apache.curator.framework.api">GetDataBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getData()" class="member-name-link">getData</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a get data builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNamespace()" class="member-name-link">getNamespace</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../schema/SchemaSet.html" title="class in org.apache.curator.framework.schema">SchemaSet</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSchemaSet()" class="member-name-link">getSchemaSet</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the current namespace or "" if none</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../schema/SchemaSet.html" title="class in org.apache.curator.framework.schema">SchemaSet</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSchemaSet()" class="member-name-link">getSchemaSet</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return this instance's schema set</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CuratorFrameworkState.html" title="enum in org.apache.curator.framework.imps">CuratorFrameworkState</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CuratorFrameworkState.html" title="enum in org.apache.curator.framework.imps">CuratorFrameworkState</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the state of this instance</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../listen/Listenable.html" title="interface in org.apache.curator.framework.listen">Listenable</a><wbr>&lt;<a href="../api/UnhandledErrorListener.html" title="interface in org.apache.curator.framework.api">UnhandledErrorListener</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnhandledErrorListenable()" class="member-name-link">getUnhandledErrorListenable</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../listen/Listenable.html" title="interface in org.apache.curator.framework.listen">Listenable</a><wbr>&lt;<a href="../api/UnhandledErrorListener.html" title="interface in org.apache.curator.framework.api">UnhandledErrorListener</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnhandledErrorListenable()" class="member-name-link">getUnhandledErrorListenable</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the listenable interface for unhandled errors</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../CuratorZookeeperClient.html" title="class in org.apache.curator">CuratorZookeeperClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getZookeeperClient()" class="member-name-link">getZookeeperClient</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../CuratorZookeeperClient.html" title="class in org.apache.curator">CuratorZookeeperClient</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getZookeeperClient()" class="member-name-link">getZookeeperClient</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return the managed zookeeper client</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../utils/ZookeeperCompatibility.html" title="class in org.apache.curator.utils">ZookeeperCompatibility</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getZookeeperCompatibility()" class="member-name-link">getZookeeperCompatibility</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../utils/ZookeeperCompatibility.html" title="class in org.apache.curator.utils">ZookeeperCompatibility</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getZookeeperCompatibility()" class="member-name-link">getZookeeperCompatibility</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Return zookeeper server compatibility</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalSync(org.apache.curator.framework.imps.CuratorFrameworkImpl,java.lang.String,java.lang.Object)" class="member-name-link">internalSync</a><wbr>(<a href="CuratorFrameworkImpl.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkImpl</a>&nbsp;impl,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;context)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/transaction/CuratorTransaction.html" title="interface in org.apache.curator.framework.api.transaction">CuratorTransaction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inTransaction()" class="member-name-link">inTransaction</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a transaction builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#isStarted()" class="member-name-link">isStarted</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../utils/EnsurePath.html" title="class in org.apache.curator.utils">EnsurePath</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newNamespaceAwareEnsurePath(java.lang.String)" class="member-name-link">newNamespaceAwareEnsurePath</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Allocates an ensure path instance that is namespace aware</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../WatcherRemoveCuratorFramework.html" title="interface in org.apache.curator.framework">WatcherRemoveCuratorFramework</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newWatcherRemoveCuratorFramework()" class="member-name-link">newWatcherRemoveCuratorFramework</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns a facade of the current instance that tracks
- watchers created and allows a one-shot removal of all watchers
- via <a href="../WatcherRemoveCuratorFramework.html#removeWatchers()"><code>WatcherRemoveCuratorFramework.removeWatchers()</code></a></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#nonNamespaceView()" class="member-name-link">nonNamespaceView</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#isStarted()" class="member-name-link">isStarted</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/ReconfigBuilder.html" title="interface in org.apache.curator.framework.api">ReconfigBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reconfig()" class="member-name-link">reconfig</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../utils/EnsurePath.html" title="class in org.apache.curator.utils">EnsurePath</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newNamespaceAwareEnsurePath(java.lang.String)" class="member-name-link">newNamespaceAwareEnsurePath</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a reconfig builder</div>
+<div class="block">Allocates an ensure path instance that is namespace aware</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a><wbr>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runSafe(java.lang.Runnable)" class="member-name-link">runSafe</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;runnable)</code></div>
@@ -305,41 +228,10 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block">Curator (and user) recipes can use this to run notifyAll
  and other blocking calls that might normally block ZooKeeper's event thread.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/SetACLBuilder.html" title="interface in org.apache.curator.framework.api">SetACLBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setACL()" class="member-name-link">setACL</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a set ACL builder</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/SetDataBuilder.html" title="interface in org.apache.curator.framework.api">SetDataBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setData()" class="member-name-link">setData</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a set data builder</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#start()" class="member-name-link">start</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Start the client.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/SyncBuilder.html" title="interface in org.apache.curator.framework.api">SyncBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sync()" class="member-name-link">sync</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a sync builder.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sync(java.lang.String,java.lang.Object)" class="member-name-link">sync</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;context)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Perform a sync on the given path - syncs are always in the background</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/transaction/CuratorMultiTransaction.html" title="interface in org.apache.curator.framework.api.transaction">CuratorMultiTransaction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transaction()" class="member-name-link">transaction</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a transaction builder</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/transaction/TransactionOp.html" title="interface in org.apache.curator.framework.api.transaction">TransactionOp</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#transactionOp()" class="member-name-link">transactionOp</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Allocate an operation that can be used with <a href="../CuratorFramework.html#transaction()"><code>CuratorFramework.transaction()</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#usingNamespace(java.lang.String)" class="member-name-link">usingNamespace</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;newNamespace)</code></div>
@@ -347,19 +239,12 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block">Returns a facade of the current instance that uses the specified namespace
  or no namespace if <code>newNamespace</code> is <code>null</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/WatchesBuilder.html" title="interface in org.apache.curator.framework.api">WatchesBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#watchers()" class="member-name-link">watchers</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a watch builder.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../api/RemoveWatchesBuilder.html" title="interface in org.apache.curator.framework.api">RemoveWatchesBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#watches()" class="member-name-link">watches</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Start a remove watches builder.</div>
 </div>
 </div>
 </div>
-</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-org.apache.curator.framework.imps.CuratorFrameworkBase">Methods inherited from class&nbsp;org.apache.curator.framework.imps.<a href="CuratorFrameworkBase.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkBase</a></h3>
+<code><a href="CuratorFrameworkBase.html#checkExists()">checkExists</a>, <a href="CuratorFrameworkBase.html#checkState()">checkState</a>, <a href="CuratorFrameworkBase.html#create()">create</a>, <a href="CuratorFrameworkBase.html#createContainers(java.lang.String)">createContainers</a>, <a href="CuratorFrameworkBase.html#delete()">delete</a>, <a href="CuratorFrameworkBase.html#getACL()">getACL</a>, <a href="CuratorFrameworkBase.html#getChildren()">getChildren</a>, <a href="CuratorFrameworkBase.html#getConfig()">getConfig</a>, <a href="CuratorFrameworkBase.html#getData()">getData</a>, <a href="CuratorFrameworkBase.html#getNamespace()">getNamespace</a>, <a href="CuratorFrameworkBase.html#internalSync(org.apache.curator.framework.imps.CuratorFrameworkBase,java.lang.String,java.lang.Object)">internalSync</a>, <a href="CuratorFrameworkBase.html#inTransaction()">inTransaction</a>, <a href="CuratorFrameworkBase.html#newWatcherRemoveCuratorFramework()">newWatcherRemoveCuratorFramework</a>, <a href="CuratorFrameworkBase.html#nonNamespaceView()">nonNamespaceView</a>, <a href="CuratorFrameworkBase.html#reconfig()">reconfig</a>, <a href="CuratorFrameworkBase.html#setACL()">setACL</a>, <a href="CuratorFrameworkBase.html#setData()">setData</a>, <a href="CuratorFrameworkBase.html#sync()">sync</a>, <a href="CuratorFrameworkBase.html#sync(java.lang.String,java.lang.Object)">sync</a>, <a href="CuratorFrameworkBase.html#transaction()">transaction</a>, <a href="CuratorFrameworkBase.html#transactionOp()">transactionOp</a>, <a href="CuratorFrameworkBase.html#watchers()">watchers</a>, <a href="CuratorFrameworkBase.html#watches()">watches</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -397,12 +282,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CuratorFrameworkImpl</span><wbr><span class="parameters">(<a href="../CuratorFrameworkFactory.Builder.html" title="class in org.apache.curator.framework">CuratorFrameworkFactory.Builder</a>&nbsp;builder)</span></div>
 </section>
 </li>
-<li>
-<section class="detail" id="&lt;init&gt;(org.apache.curator.framework.imps.CuratorFrameworkImpl)">
-<h3>CuratorFrameworkImpl</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">CuratorFrameworkImpl</span><wbr><span class="parameters">(<a href="CuratorFrameworkImpl.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkImpl</a>&nbsp;parent)</span></div>
-</section>
-</li>
 </ul>
 </section>
 </li>
@@ -419,28 +298,10 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block">Curator (and user) recipes can use this to run notifyAll
  and other blocking calls that might normally block ZooKeeper's event thread.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#runSafe(java.lang.Runnable)">runSafe</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>runnable</code> - proc to call from a safe internal thread</dd>
 <dt>Returns:</dt>
 <dd>a CompletableFuture that can be used to monitor when the call is complete</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="newWatcherRemoveCuratorFramework()">
-<h3>newWatcherRemoveCuratorFramework</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../WatcherRemoveCuratorFramework.html" title="interface in org.apache.curator.framework">WatcherRemoveCuratorFramework</a></span>&nbsp;<span class="element-name">newWatcherRemoveCuratorFramework</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#newWatcherRemoveCuratorFramework()">CuratorFramework</a></code></span></div>
-<div class="block">Returns a facade of the current instance that tracks
- watchers created and allows a one-shot removal of all watchers
- via <a href="../WatcherRemoveCuratorFramework.html#removeWatchers()"><code>WatcherRemoveCuratorFramework.removeWatchers()</code></a></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#newWatcherRemoveCuratorFramework()">newWatcherRemoveCuratorFramework</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>facade</dd>
 </dl>
 </section>
 </li>
@@ -451,28 +312,8 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getCurrentConfig()">CuratorFramework</a></code></span></div>
 <div class="block">Current maintains a cached view of the Zookeeper quorum config.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getCurrentConfig()">getCurrentConfig</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>the current config</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="createContainers(java.lang.String)">
-<h3>createContainers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createContainers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</span>
-                      throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#createContainers(java.lang.String)">CuratorFramework</a></code></span></div>
-<div class="block">Create all nodes in the specified path as containers if they don't
- already exist</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#createContainers(java.lang.String)">createContainers</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>path</code> - path to create</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code> - errors</dd>
 </dl>
 </section>
 </li>
@@ -484,8 +325,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block">Curator can hold internal references to watchers that may inhibit garbage collection.
  Call this method on watchers you are no longer interested in.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#clearWatcherReferences(org.apache.zookeeper.Watcher)">clearWatcherReferences</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>watcher</code> - the watcher</dd>
 </dl>
@@ -498,8 +337,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getState()">CuratorFramework</a></code></span></div>
 <div class="block">Returns the state of this instance</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>state</dd>
 </dl>
@@ -514,8 +351,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#isStarted()">CuratorFramework</a></code></span></div>
 <div class="block">Return true if the client is started, not closed, etc.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#isStarted()">isStarted</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>true/false</dd>
 </dl>
@@ -530,8 +365,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#blockUntilConnected(int,java.util.concurrent.TimeUnit)">CuratorFramework</a></code></span></div>
 <div class="block">Block until a connection to ZooKeeper is available or the maxWaitTime has been exceeded</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#blockUntilConnected(int,java.util.concurrent.TimeUnit)">blockUntilConnected</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>maxWaitTime</code> - The maximum wait time.
                     1. <code>value &lt;= 0</code> and <code>units != null</code> to return immediately;
@@ -555,8 +388,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
  connection is available, or it is interrupted, in which case an InterruptedException will
  be thrown</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#blockUntilConnected()">blockUntilConnected</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - If interrupted while waiting</dd>
 </dl>
@@ -569,8 +400,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getConnectionStateErrorPolicy()">CuratorFramework</a></code></span></div>
 <div class="block">Return the configured error policy</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getConnectionStateErrorPolicy()">getConnectionStateErrorPolicy</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>error policy</dd>
 </dl>
@@ -582,10 +411,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">start</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#start()">CuratorFramework</a></code></span></div>
 <div class="block">Start the client. Most mutator methods will not work until the client is started</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#start()">start</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-</dl>
 </section>
 </li>
 <li>
@@ -594,45 +419,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">close</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#close()">CuratorFramework</a></code></span></div>
 <div class="block">Stop the client</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close--" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html#close--" title="class or interface in java.io" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#close()">close</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="nonNamespaceView()">
-<h3>nonNamespaceView</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></span>&nbsp;<span class="element-name">nonNamespaceView</span>()</div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#nonNamespaceView()">CuratorFramework</a></code></span></div>
-<div class="block">Returns a facade of the current instance that does _not_ automatically
- pre-pend the namespace to all paths</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#nonNamespaceView()">nonNamespaceView</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>facade</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNamespace()">
-<h3>getNamespace</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getNamespace</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getNamespace()">CuratorFramework</a></code></span></div>
-<div class="block">Return the current namespace or "" if none</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getNamespace()">getNamespace</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>namespace</dd>
-</dl>
 </section>
 </li>
 <li>
@@ -643,199 +429,10 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block">Returns a facade of the current instance that uses the specified namespace
  or no namespace if <code>newNamespace</code> is <code>null</code>.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#usingNamespace(java.lang.String)">usingNamespace</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>newNamespace</code> - the new namespace or null for none</dd>
 <dt>Returns:</dt>
 <dd>facade</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="create()">
-<h3>create</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/CreateBuilder.html" title="interface in org.apache.curator.framework.api">CreateBuilder</a></span>&nbsp;<span class="element-name">create</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#create()">CuratorFramework</a></code></span></div>
-<div class="block">Start a create builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#create()">create</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="delete()">
-<h3>delete</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/DeleteBuilder.html" title="interface in org.apache.curator.framework.api">DeleteBuilder</a></span>&nbsp;<span class="element-name">delete</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#delete()">CuratorFramework</a></code></span></div>
-<div class="block">Start a delete builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#delete()">delete</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="checkExists()">
-<h3>checkExists</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/ExistsBuilder.html" title="interface in org.apache.curator.framework.api">ExistsBuilder</a></span>&nbsp;<span class="element-name">checkExists</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#checkExists()">CuratorFramework</a></code></span></div>
-<div class="block">Start an exists builder
- <p>
- The builder will return a Stat object as if org.apache.zookeeper.ZooKeeper.exists() were called.  Thus, a null
- means that it does not exist and an actual Stat object means it does exist.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#checkExists()">checkExists</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getData()">
-<h3>getData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/GetDataBuilder.html" title="interface in org.apache.curator.framework.api">GetDataBuilder</a></span>&nbsp;<span class="element-name">getData</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getData()">CuratorFramework</a></code></span></div>
-<div class="block">Start a get data builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getData()">getData</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setData()">
-<h3>setData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/SetDataBuilder.html" title="interface in org.apache.curator.framework.api">SetDataBuilder</a></span>&nbsp;<span class="element-name">setData</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#setData()">CuratorFramework</a></code></span></div>
-<div class="block">Start a set data builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#setData()">setData</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getChildren()">
-<h3>getChildren</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/GetChildrenBuilder.html" title="interface in org.apache.curator.framework.api">GetChildrenBuilder</a></span>&nbsp;<span class="element-name">getChildren</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getChildren()">CuratorFramework</a></code></span></div>
-<div class="block">Start a get children builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getChildren()">getChildren</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getACL()">
-<h3>getACL</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/GetACLBuilder.html" title="interface in org.apache.curator.framework.api">GetACLBuilder</a></span>&nbsp;<span class="element-name">getACL</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getACL()">CuratorFramework</a></code></span></div>
-<div class="block">Start a get ACL builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getACL()">getACL</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setACL()">
-<h3>setACL</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/SetACLBuilder.html" title="interface in org.apache.curator.framework.api">SetACLBuilder</a></span>&nbsp;<span class="element-name">setACL</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#setACL()">CuratorFramework</a></code></span></div>
-<div class="block">Start a set ACL builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#setACL()">setACL</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="reconfig()">
-<h3>reconfig</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/ReconfigBuilder.html" title="interface in org.apache.curator.framework.api">ReconfigBuilder</a></span>&nbsp;<span class="element-name">reconfig</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#reconfig()">CuratorFramework</a></code></span></div>
-<div class="block">Start a reconfig builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#reconfig()">reconfig</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getConfig()">
-<h3>getConfig</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/GetConfigBuilder.html" title="interface in org.apache.curator.framework.api">GetConfigBuilder</a></span>&nbsp;<span class="element-name">getConfig</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getConfig()">CuratorFramework</a></code></span></div>
-<div class="block">Start a getConfig builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getConfig()">getConfig</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="inTransaction()">
-<h3>inTransaction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/transaction/CuratorTransaction.html" title="interface in org.apache.curator.framework.api.transaction">CuratorTransaction</a></span>&nbsp;<span class="element-name">inTransaction</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#inTransaction()">CuratorFramework</a></code></span></div>
-<div class="block">Start a transaction builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#inTransaction()">inTransaction</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="transaction()">
-<h3>transaction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/transaction/CuratorMultiTransaction.html" title="interface in org.apache.curator.framework.api.transaction">CuratorMultiTransaction</a></span>&nbsp;<span class="element-name">transaction</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#transaction()">CuratorFramework</a></code></span></div>
-<div class="block">Start a transaction builder</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#transaction()">transaction</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="transactionOp()">
-<h3>transactionOp</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/transaction/TransactionOp.html" title="interface in org.apache.curator.framework.api.transaction">TransactionOp</a></span>&nbsp;<span class="element-name">transactionOp</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#transactionOp()">CuratorFramework</a></code></span></div>
-<div class="block">Allocate an operation that can be used with <a href="../CuratorFramework.html#transaction()"><code>CuratorFramework.transaction()</code></a>.
- NOTE: <a href="../api/transaction/CuratorOp.html" title="interface in org.apache.curator.framework.api.transaction"><code>CuratorOp</code></a> instances created by this builder are
- reusable.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#transactionOp()">transactionOp</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>operation builder</dd>
 </dl>
 </section>
 </li>
@@ -846,8 +443,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getConnectionStateListenable()">CuratorFramework</a></code></span></div>
 <div class="block">Returns the listenable interface for the Connect State</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getConnectionStateListenable()">getConnectionStateListenable</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>listenable</dd>
 </dl>
@@ -860,8 +455,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getCuratorListenable()">CuratorFramework</a></code></span></div>
 <div class="block">Returns the listenable interface for events</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getCuratorListenable()">getCuratorListenable</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>listenable</dd>
 </dl>
@@ -874,79 +467,9 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getUnhandledErrorListenable()">CuratorFramework</a></code></span></div>
 <div class="block">Returns the listenable interface for unhandled errors</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getUnhandledErrorListenable()">getUnhandledErrorListenable</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>listenable</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="sync(java.lang.String,java.lang.Object)">
-<h3>sync</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">sync</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;context)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#sync(java.lang.String,java.lang.Object)">CuratorFramework</a></code></span></div>
-<div class="block">Perform a sync on the given path - syncs are always in the background</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#sync(java.lang.String,java.lang.Object)">sync</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>path</code> - the path</dd>
-<dd><code>context</code> - optional context</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="sync()">
-<h3>sync</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/SyncBuilder.html" title="interface in org.apache.curator.framework.api">SyncBuilder</a></span>&nbsp;<span class="element-name">sync</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#sync()">CuratorFramework</a></code></span></div>
-<div class="block">Start a sync builder. Note: sync is ALWAYS in the background even
- if you don't use one of the background() methods</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#sync()">sync</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="watches()">
-<h3>watches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/RemoveWatchesBuilder.html" title="interface in org.apache.curator.framework.api">RemoveWatchesBuilder</a></span>&nbsp;<span class="element-name">watches</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#watches()">CuratorFramework</a></code></span></div>
-<div class="block">Start a remove watches builder.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#watches()">watches</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="watchers()">
-<h3>watchers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/WatchesBuilder.html" title="interface in org.apache.curator.framework.api">WatchesBuilder</a></span>&nbsp;<span class="element-name">watchers</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#watchers()">CuratorFramework</a></code></span></div>
-<div class="block">Start a watch builder. Supported only when ZooKeeper JAR of version 3.6 or
- above is used, throws <code>IllegalStateException</code> for ZooKeeper JAR 3.5 or below</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#watchers()">watchers</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
-<dt>Returns:</dt>
-<dd>builder object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="internalSync(org.apache.curator.framework.imps.CuratorFrameworkImpl,java.lang.String,java.lang.Object)">
-<h3>internalSync</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">internalSync</span><wbr><span class="parameters">(<a href="CuratorFrameworkImpl.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkImpl</a>&nbsp;impl,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;context)</span></div>
 </section>
 </li>
 <li>
@@ -956,8 +479,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getZookeeperClient()">CuratorFramework</a></code></span></div>
 <div class="block">Return the managed zookeeper client</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getZookeeperClient()">getZookeeperClient</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>client</dd>
 </dl>
@@ -970,8 +491,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getZookeeperCompatibility()">CuratorFramework</a></code></span></div>
 <div class="block">Return zookeeper server compatibility</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getZookeeperCompatibility()">getZookeeperCompatibility</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>compatibility</dd>
 </dl>
@@ -986,6 +505,8 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CuratorFramework.html#newNamespaceAwareEnsurePath(java.lang.String)">newNamespaceAwareEnsurePath</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
+<dt>Overrides:</dt>
+<dd><code><a href="CuratorFrameworkBase.html#newNamespaceAwareEnsurePath(java.lang.String)">newNamespaceAwareEnsurePath</a></code>&nbsp;in class&nbsp;<code><a href="CuratorFrameworkBase.html" title="class in org.apache.curator.framework.imps">CuratorFrameworkBase</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>path</code> - path to ensure</dd>
 <dt>Returns:</dt>
@@ -1000,8 +521,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#getSchemaSet()">CuratorFramework</a></code></span></div>
 <div class="block">Return this instance's schema set</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#getSchemaSet()">getSchemaSet</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>schema set</dd>
 </dl>
@@ -1014,8 +533,6 @@ implements <a href="../CuratorFramework.html" title="interface in org.apache.cur
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CuratorFramework.html#compressionEnabled()">CuratorFramework</a></code></span></div>
 <div class="block">Return whether compression is enabled by default for all create, setData and getData operations.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CuratorFramework.html#compressionEnabled()">compressionEnabled</a></code>&nbsp;in interface&nbsp;<code><a href="../CuratorFramework.html" title="interface in org.apache.curator.framework">CuratorFramework</a></code></dd>
 <dt>Returns:</dt>
 <dd>if compression is enabled</dd>
 </dl>
