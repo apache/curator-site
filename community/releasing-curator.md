@@ -13,23 +13,23 @@ To release Curator, the following steps must be followed:
 
 ## Prepare the Release
 
-1. Do a dry run of the release/prepare step by executing `mvn -P apache-release release:prepare -DdryRun=true`. The dry run will not commit any changes back to Git and gives you the opportunity to verify that the release process will complete as expected. If you need to cancel, execute `mvn release:clean` and then reset via `git reset --hard`.
+1. Do a dry run of the release/prepare step by executing `./mvnw -P apache-release release:prepare -DdryRun=true`. The dry run will not commit any changes back to Git and will allow you to verify that the release process will be completed as expected. If you need to cancel, execute `./mvnw release:clean` and then reset via `git reset --hard`.
 2. Verify that the release process completed as expected:
-   * The release plugin will create `pom.xml.tag` files which contain the changes that would have been committed to SVN. The only differences between `pom.xml.tag` and its corresponding `pom.xml` file should be the version number.
-   * If other formatting changes have been made you should review the changes and then commit and push them.
-   * Once any failures or required updates have been committed to svn, rollback the release prepare files: `mvn release:rollback`
+   * The release plugin will create `pom.xml.tag` files, which contain the changes that would have been committed to SVN. The only difference between `pom.xml.tag` and its corresponding `pom.xml` file should be the version number.
+   * If other formatting changes have been made, you should review the changes and then commit and push them.
+   * Once any failures or required updates have been committed to svn, rollback the release prepare files: `./mvnw release:rollback`
 3. Execute the release/prepare step for real this time
    * You'll be prompted for the same version information and optionally your GPG
    * passphrase again
-   * mvn -P apache-release release:prepare
-   * mvn -P apache-release release:perform
-   * git push --tags
+   * `./mvnw -P apache-release release:prepare`
+   * `./mvnw -P apache-release release:perform`
+   * `git push --tags`
 4. Verify the staged artifacts in the Apache Nexus repository:
    * Go to: https://repository.apache.org/index.html
    * Login
-   * Select Staging Repositories under the Build Promotion section on the left hand side
+   * Select Staging Repositories under the Build Promotion section on the left-hand side
    * Select the repository from the main window
-   * Select the content tab at the bottom of the screen and navigate through the artifact tree and double check things.
+   * Select the content tab at the bottom of the screen and navigate through the artifact tree and double-check things.
 5. Close the Nexus staging repo by clicking on the curator repo and clicking the "Close" button.
 
 :::caution
@@ -40,12 +40,12 @@ DO NOT release the binaries yet.
 
 ## Stage the Apache Release
 
-1. At the root of your Curator directory, find the target directory.
-2. In the directory you will now find 3 files that need to be staged:
+1. At the root of your Curator directory, find the `target` directory.
+2. In the directory, you will now find 3 files that need to be staged:
    * apache-curator-X.X.X-source-release.zip
    * apache-curator-X.X.X-source-release.zip.asc
    * apache-curator-X.X.X-source-release.zip.sha512
-3. These files must be put into the staging directory (svn co https://dist.apache.org/repos/dist/dev/curator/)
+3. These files must be put into the staging directory (`svn co https://dist.apache.org/repos/dist/dev/curator/`)
    * Create a directory for the release
    * `cp` the files to this directory
    * Remove any old release directories via: `svn rm`
