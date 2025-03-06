@@ -40,17 +40,18 @@ DO NOT release the binaries yet.
 
 ## Stage the Apache Release
 
+Supposed the new version is `$version`.
+
 1. At the root of your Curator directory, find the `target` directory.
 2. In the directory, you will now find 3 files that need to be staged:
    * apache-curator-X.X.X-source-release.zip
    * apache-curator-X.X.X-source-release.zip.asc
    * apache-curator-X.X.X-source-release.zip.sha512
 3. These files must be put into the staging directory (`svn co https://dist.apache.org/repos/dist/dev/curator/`)
-   * Create a directory for the release
+   * Create a directory for the release: `mkdir $version`
    * `cp` the files to this directory
-   * Remove any old release directories via: `svn rm`
-   * Add the new directory via: `svn add`
-   * Commit via: `svn commit`
+   * Add the new directory via: `svn add $version`
+   * Commit via: `svn commit -m "Apache Curator $version release candidate"`
 
 ## Initiate a Vote On the Release
 
@@ -66,9 +67,10 @@ Create a VOTE email thread on dev@curator.apache.org to record votes as replies 
 
 ## Promote the Release
 
-1. These files must be put into the release directory (svn co https://dist.apache.org/repos/dist/release/curator/)
-   * Create a directory for the release
-   * `cp` the files to this directory and then `svn commit`
+Supposed the new version is `$version`.
+
+1. Move the release candidate to the release directory (https://dist.apache.org/repos/dist/release/curator/)
+   * `svn mv https://dist.apache.org/repos/dist/dev/curator/$version https://dist.apache.org/repos/dist/release/curator/$version -m "Release Curator $version"`
 2. Release the binary artifacts
    * Go to: https://repository.apache.org/index.html
    * Select the curator release and click the "Release" button.
@@ -83,12 +85,6 @@ Create a VOTE email thread on dev@curator.apache.org to record votes as replies 
    * Make sure all links to downloads, release notes, etc. are "https"
 5. You MUST publish the Curator Website (see below) prior to the next step
 6. Update the Apache Reporter Tool: https://reporter.apache.org/addrelease.html?curator
-7. Mark the version as released in JIRA
-   1. Go here: https://issues.apache.org/jira/browse/CURATOR/?selectedTab=com.atlassian.jira.jira-projects-plugin:versions-panel
-   2. Click the "Manage Versions" button
-   3. Set the release date for the version
-   4. Create a new Version and set the start date
-   5. Exit administration mode by clicking "Overview" in the near-top-left area
 
 ## Clean Up Old Releases
 
@@ -111,7 +107,7 @@ This is the vote for Apache Curator version X.X.X
 Note that we are voting upon the source (tag) and binaries are provided for convenience.
 
 Link to release notes:
-https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12314425&version=12326663
+https://github.com/apache/curator/releases/tag/untagged-HHHHHHHH
 
 Staging repo:
 https://dist.apache.org/repos/dist/dev/curator/X.X.X/
@@ -172,8 +168,7 @@ For general information on Apache Curator, please visit the project website:
 https://curator.apache.org
 
 Release Notes:
-
-<<PASTE RELEASE NOTES FROM JIRA HERE>>
+https://github.com/apache/curator/releases/tag/apache-curator-X.Y.Z
 
 Regards,
 
