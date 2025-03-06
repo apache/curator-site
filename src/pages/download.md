@@ -14,9 +14,9 @@ You can verify the integrity of a downloaded release using the PGP signatures an
 
 ## Current release
 
-* Current release: [apache-curator-5.7.1-source-release.zip](https://downloads.apache.org/curator/5.7.1/apache-curator-5.7.1-source-release.zip)
-* PGP: [apache-curator-5.7.1-source-release.zip.asc](https://downloads.apache.org/curator/5.7.1/apache-curator-5.7.1-source-release.zip.asc)
-* SHA-512: [apache-curator-5.7.1-source-release.zip.sha512](https://downloads.apache.org/curator/5.7.1/apache-curator-5.7.1-source-release.zip.sha512)
+* Current release: [apache-curator-5.8.0-source-release.zip](https://downloads.apache.org/curator/5.8.0/apache-curator-5.8.0-source-release.zip)
+* PGP: [apache-curator-5.8.0-source-release.zip.asc](https://downloads.apache.org/curator/5.8.0/apache-curator-5.8.0-source-release.zip.asc)
+* SHA-512: [apache-curator-5.8.0-source-release.zip.sha512](https://downloads.apache.org/curator/5.8.0/apache-curator-5.8.0-source-release.zip.sha512)
 * Keys: [KEYS](https://downloads.apache.org/curator/KEYS)
 
 ## History
@@ -24,6 +24,9 @@ You can verify the integrity of a downloaded release using the PGP signatures an
 Below is a detailed historical list of releases.
 
 Starting from 4.1.0, Apache Curator maintains only the current version and do monotonic releases; that is, no backport.
+
+### 2025-03-06 Release 5.8.0 available
+See [Curator 5.8.0 Release Notes](https://github.com/apache/curator/releases/tag/apache-curator-5.8.0) for details.
 
 ### 2024-10-13 Release 5.7.1 available
 See [Curator 5.7.1 Release Notes](https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12314425&version=12355135) for details.
