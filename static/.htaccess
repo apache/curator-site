@@ -1,0 +1,8 @@
+# redirect rules to prevent old links from breaking
+RewriteEngine On
+
+# Redirect /curator-recipes/index.html to the new recipes documentation
+# R=301: Permanent Redirect (SEO friendly)
+# L: Last rule (stops processing if this rule matches)
+RewriteRule ^/?curator-recipes/?$ https://curator.apache.org/docs/recipes/ [R=301,L]
+RewriteRule ^/?curator-recipes/index\.html$ https://curator.apache.org/docs/recipes/ [R=301,L]
